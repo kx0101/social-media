@@ -18,13 +18,13 @@ router.post("/register", async (req, res) => {
             password: hashedPassword,
         });
 
-        // Save user return 200 for success
+        // Save user
         const user = await newUser.save();
         res.status(200).json(user);
     } catch (error) {
         console.log(error);
     }
-})
+}) 
 
 // Login
 router.post("/login", async (req, res) => {

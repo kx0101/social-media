@@ -30,5 +30,5 @@ app.use("/api/posts", postRoute);
 
 // Server's port
 app.listen(3000, () => {
-    console.log("Server opened in port 3000")
+    console.log("Server opened at port 3000")
 });
