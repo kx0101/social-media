@@ -86,7 +86,7 @@ router.get("/:id", async (req, res) => {
 
 // Get all posts of the user followings (timeline)
 // Basically the way it works is that the user gets a timeline of all the posts
-// that have been made from the people that the user follows.
+// that have been made from the people that the user follows. 
 router.get("/timeline/:userId", async (req, res) => {
 
     try {
