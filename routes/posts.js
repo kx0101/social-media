@@ -91,7 +91,7 @@ router.get("/timeline/:userId", async (req, res) => {
 
     try {
         // using promises instead of await because we're having multiple promises 
-        // for multiple posts 
+        // for multiple posts.
 
         const currentUser = await User.findById(req.params.userId);
         // finding all posts of that specific user that is eligible to see using Promise.all because we're mapping
