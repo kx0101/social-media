@@ -87,13 +87,13 @@ router.get("/:id", async (req, res) => {
 // Get all posts of the user followings (timeline)
 // Basically the way it works is that the user gets a timeline of all the posts
 // that have been made from the people that the user follows.
-router.get("/timeline/all", async (req, res) => {
+router.get("/timeline/:userId", async (req, res) => {
 
     try {
         // using promises instead of await because we're having multiple promises 
         // for multiple posts 
 
-        const currentUser = await User.findById(req.body.userId);
+        const currentUser = await User.findById(req.params.userId);
         // finding all posts of that specific user that is eligible to see using Promise.all because we're mapping
         const userPosts = await Post.find({ userId: currentUser._id });
         const friendPosts = await Promise.all(
