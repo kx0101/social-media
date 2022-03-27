@@ -1,15 +1,15 @@
-Hermes - Social Media Project - API
+# Hermes - Social Media Project - API
 
-+Connecting MongoDB
+## +Connecting MongoDB
 
-+Creating User Router
+## +Creating User Router
 
-+Login and Register System hashing with salt password using bcrypt ( no session or JWT or Oauth2 added yet )
+## +Login and Register System hashing with salt password using bcrypt ( no session or JWT or Oauth2 added yet )
 
-+Node.js Express CRUD
+## +Node.js Express CRUD
 
-+Follow and Unfollow User
+## +Follow and Unfollow User
 
-+Node.js MongoDB Post CRUD
+## +Node.js MongoDB Post CRUD
 
-+Like and Dislike Post
+## +Like and Dislike Post
