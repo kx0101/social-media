@@ -60,12 +60,12 @@ router.put("/:id/like", async (req, res) => {
         // liked this specific post. If not, we're adding the user to the array of likes
         const post = await Post.findById(req.params.id);
         if(!post.likes.includes(req.body.userId)){
-            await Post.updateOne({$push: {likes: req.body.userId} })
+            await post.updateOne({$push: {likes: req.body.userId} })
             res.status(200).json("Post liked!");
         } else {
             // if already liked, we're removing the like
-            await Post.updateOne({$pull: {likes: req.body.userId}});
-            res.status(200).json("Post unliked!");
+            await post.updateOne({$pull: {likes: req.body.userId}});
+            res.status(200).json("Post disliked!");
         }
 
     } catch (error) {
